@@ -12,7 +12,7 @@ def demo1(bot,update):
 def demo2(bot,update):
   chat_id = bot.message.chat_id
   path = 'https://static.scientificamerican.com/sciam/cache/file/2B38DE31-C1D3-4339-8808D61972976EE4.jpg'
-  bot.message.reply_text('LIGHT is turned ON')
+  bot.message.reply_text('Light is turned ON')
   aio.send('bedroom-light', 1)
   data1 = aio.receive('bedroom-light')
   print(f'Received value: {data1.value}')
@@ -20,7 +20,7 @@ def demo2(bot,update):
 def demo3(bot,update):
   chat_id = bot.message.chat_id
   path = 'https://image.shutterstock.com/image-photo/light-bulb-turned-off-over-260nw-320485652.jpg'
-  bot.message.reply_text('LIGHT is turned OFF')
+  bot.message.reply_text('Light is turned OFF')
   aio.send('bedroom-light', 0)
   data1 = aio.receive('bedroom-light')
   print(f'Received value: {data1.value}')
@@ -28,7 +28,7 @@ def demo3(bot,update):
 def demo4(bot,update):
   chat_id = bot.message.chat_id
   path = 'https://cdn.frontdoorhome.com/ahs/blog/prod/static/cs/ahs/image/running-fan.jpg'
-  bot.message.reply_text('FAN is turned ON')
+  bot.message.reply_text('Fan is turned ON')
   aio.send('bedroom-fan', 1)
   data2 = aio.receive('bedroom-fan')
   print(f'Received value: {data2.value}')
@@ -36,7 +36,7 @@ def demo4(bot,update):
 def demo5(bot,update):
   chat_id = bot.message.chat_id
   path = 'https://www.destinationlighting.com/fliptheswitch/wp-content/uploads/sites/2/2018/05/zudio-casablanca.jpg'
-  bot.message.reply_text('FAN is turned OFF')
+  bot.message.reply_text('Fan is turned OFF')
   aio.send('bedroom-fan', 0)
   data2 = aio.receive('bedroom-fan')
   print(f'Received value: {data2.value}')
@@ -51,9 +51,9 @@ def main(bot,update):
     demo2(bot,update)
   elif a =="light off" or a=="turn off light":
     demo3(bot,update)
-  elif a =="switch on the fan" or a=="turn on fan":
+  elif a =="switch on fan" or a=="turn on fan":
     demo4(bot,update)
-  elif a =="switch of the fan" or a=="turn off fan":
+  elif a =="switch off fan" or a=="turn off fan":
     demo5(bot,update)
   else:
     bot.message.reply_text('Invalid Text')
